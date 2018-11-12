@@ -19,10 +19,4 @@ def caesar_cipher(string, shift)
     }
   }
   return cipher
-<<<<<<< HEAD
 end
-
-puts caesar_cipher("I'm a superstar!", 11)
-=======
-end
->>>>>>> Add Caesar Cypher
