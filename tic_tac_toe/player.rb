@@ -12,6 +12,6 @@ class Player
     row = gets.chomp
     puts "Column number: "
     column = gets.chomp
-    [row, column]
+    [row.to_i, column.to_i]
   end
 end
