@@ -4,7 +4,6 @@ class Player
   def initialize (name, mark)
     @name = name
     @mark = mark
-    @score = 0
   end
   def move
     puts "#{@name}, your turn!"
