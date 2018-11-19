@@ -21,13 +21,18 @@ def game_loop
   board.look
   starter = Controller.coin_toss
   puts "Player #{starter} will start."
-  while (true)
+  while (not Controller.game_over?(board, players[starter-1].mark))
     puts "Make your move"
     move = players[starter-1].move
     board.insert(move, players[starter-1].mark)
     board.look
+    if (board.full?)
+      puts "The result is a draw!"
+      exit
+    end
     (starter-1 == 0) ? starter += 1 : starter -= 1
   end
+  puts "The winner is: #{players[starter-1].name}!"
 end
 
 game_loop

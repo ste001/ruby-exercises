@@ -1,6 +1,7 @@
 class Board
   attr_reader :rows
   attr_reader :columns
+  attr_reader :board
   def initialize (rows, columns)
     @rows = rows
     @columns = columns
@@ -14,10 +15,10 @@ class Board
       while (j < @columns)
         print "#{@board[i][j]}|"
         $stdout.flush
-        j = j + 1
+        j += 1
       end
       puts ""
-      i = i + 1
+      i += 1
       j = 0
     end
   end
@@ -27,9 +28,9 @@ class Board
     while (i < @rows)
       while (j < @columns)
         @board[i][j] = " "
-        j = j + 1
+        j += 1
       end
-      i = i + 1
+      i += 1
       j = 0
     end
   end
@@ -48,9 +49,9 @@ class Board
         if @board[i][j] == " "
           return false
         end
-        j = j + 1
+        j += 1
       end
-      i = i + 1
+      i += 1
       j = 0
     end
     true
