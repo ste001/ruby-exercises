@@ -7,6 +7,7 @@ class Player
     puts "Type your guess (one color per line)"
     4.times do
       color = gets.chomp
+      color = color.downcase
       combination.push(color)
     end
     combination
