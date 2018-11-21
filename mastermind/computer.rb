@@ -5,6 +5,12 @@ class Computer
     randomize_combination
   end
 
+  def guess
+    @combination = []
+    randomize_combination
+    @combination
+  end
+
   private
   def randomize_combination
     4.times do
@@ -13,5 +19,3 @@ class Computer
     end
   end
 end
-
-c = Computer.new

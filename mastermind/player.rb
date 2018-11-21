@@ -3,8 +3,17 @@ class Player
     @name = name
   end
   def guess
-    combination = []
     puts "Type your guess (one color per line)"
+    combination = insert_code
+  end
+  def code_make
+    puts "Type your code (one color per line)"
+    combination = insert_code
+  end
+  
+  private
+  def insert_code
+    combination = []
     4.times do
       color = gets.chomp
       color = color.downcase
@@ -12,4 +21,5 @@ class Player
     end
     combination
   end
+
 end
