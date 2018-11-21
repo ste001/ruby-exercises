@@ -10,6 +10,7 @@ module Compare
     end
     count
   end
+  # TODO: Fix the case when there are duplicates in the code
   def self.same_but_wrong_place(guess, answer)
     i = 0
     j = 0
@@ -41,6 +42,6 @@ module Compare
         feedback.push(" ")
       end
     end
-    feedback
+    feedback[0..3]
   end
 end
