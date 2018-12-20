@@ -1,4 +1,5 @@
 def caesar_cipher(string, shift)
+  return "" if string.nil?
   cipher = ""
   string.split("").map{|x|
     x.each_char{|y|
